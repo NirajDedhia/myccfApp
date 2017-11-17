@@ -1,0 +1,46 @@
+<ion-view view-title="RIT CAREER FAIR">
+
+  <ion-content class="padding">
+
+
+    <div class="row" style="height: 12vh; border: solid 1px #4682B4; border-radius: 5px; background-color: #4682B4 ; color:#ffffff ">
+      <div class="col" style="padding-top: 6%; height:100%; text-align: center; vertical-align: middle; font-size: 6vh;">{{company.name}}</div>
+    </div>
+
+    <div style="height: 66vh; border: solid 1px; border-radius: 5px; background-color: #4682B4 ; color:#ffffff">
+
+      <div class="row" style="height: 20vh;">
+        <div class="col" style="padding-top: 13%; height:100%; text-align: center; vertical-align: middle; font-size: 20vh">{{company.boothNo}}</div>
+      </div>
+
+      <br>
+
+      <div class="row" style="height: 40vh;">
+        <div class="col" style=" height:100%; text-align: center; vertical-align: middle; font-size: 3vh">
+          <b><u>Position</u></b><br>
+          <p>{{company.positions}}</p><br><br>
+
+          <b><u>Skills</u></b><br>
+          <p>{{company.skills}}</p><br><br>
+
+          <b><u>Website</u></b><br>
+          <p>{{company.website}}</p>
+        </div>
+      </div>
+
+      <br>
+    <div>
+
+    <div class="row" style="height: 10vh; border: solid 1px; border-radius: 5px; background-color: #DC143C" ng-show="!company.visited" ng-click=markVisited(company)>
+      <div class="col" style="padding-top: 5%; height:100%; text-align: center; vertical-align: middle; font-size: 5vh">NOT VISITED
+      </div>
+    </div>
+
+    <div class="row" style="height: 10vh; border: solid 1px; border-radius: 5px; background-color: #008000" ng-show="company.visited" ng-click=markVisited(company)>
+      <div class="col" style="padding-top: 6%; height:100%; text-align: center; vertical-align: middle; font-size: 5vh">VISITED
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>
